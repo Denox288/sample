@@ -1,0 +1,69 @@
+.modern-table table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.modern-table th, .modern-table td {
+        padding: 14px 18px;
+        text-align: left;
+        border-bottom: 1px solid #f0f0f0;
+}
+.modern-table th {
+        background: #f8fafc;
+        font-weight: 600;
+        color: #333;
+        letter-spacing: 0.03em;
+}
+.modern-table tr:last-child td {
+        border-bottom: none;
+}
+.ticket-number {
+        font-weight: bold;
+        color: #2563eb;
+}
+.user-name {
+        font-weight: 500;
+        color: #0f172a;
+}
+.status-badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 16px;
+        font-size: 0.95em;
+        font-weight: 500;
+        color: #fff;
+}
+.status-open { background: #22c55e; }
+.status-closed { background: #ef4444; }
+.status-pending { background: #f59e42; }
+@media (max-width: 900px) {
+        .modern-table table, .modern-table thead, .modern-table tbody, .modern-table th, .modern-table td, .modern-table tr {
+            display: block;
+    }
+    .modern-table tr {
+            margin-bottom: 1.2em;
+            background: #f9fafb;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .modern-table td {
+            border: none;
+            position: relative;
+            padding-left: 50%;
+    }
+    .modern-table td:before {
+            position: absolute;
+            left: 16px;
+            top: 14px;
+            width: 45%;
+            white-space: nowrap;
+            font-weight: 600;
+            color: #64748b;
+            content: attr(data-label);
+    }
+    .modern-table th { display: none; }
+}

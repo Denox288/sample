@@ -1,0 +1,451 @@
+/* Reset & basic styles */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Parallax Header */
+.parallax {
+  background-image: url('img/bg.png'); /* Replace with your own background */
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+background: linear-gradient(-30deg, #E9D5FCff, #95A9E8ff, #CAD8FBff);
+border: none;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+img {
+  image-rendering: auto;
+  image-rendering: smooth;
+  -ms-interpolation-mode: bicubic; /* for IE */
+}
+
+
+.btn:hover {
+  background-color:  rgb(230, 163, 187);
+}
+
+/* Info Sections */
+.info-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+
+.info-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.info-section p, .info-section li {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(-30deg, #E9D5FCff, #95A9E8ff, #CAD8FBff);
+    color: #fff;
+}
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Nexa,sans-serif;
+    font-size: large;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/Nexa-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'MyFonth1';
+    src: url('fonts/Nexa-Heavy.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+h1, h3, p {
+    margin: 0;
+}
+h2 .trouble{
+    text-align: center;
+
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.navbar {
+  position: fixed;          /* Stays on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.navbar h1{
+    color: rgb(82, 111, 165);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    gap: 20px;
+    padding: 3rem 1.5rem;font-family: Arial, sans-serif;
+}
+.navbar .logo {
+  font-size: 24px;
+  color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Default: white text for dark backgrounds */
+.nav-links li a {
+    color: rgb(82, 111, 165);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Invert: dark text for light backgrounds */
+.info-section.light .nav-links li a,
+footer .nav-links li a,
+body.light-bg .nav-links li a {
+    color: #222;
+}
+
+.nav-links li a:hover {
+    color: #ffd700;
+}
+
+/* Invert hover for light backgrounds */
+.info-section.light .nav-links li a:hover,
+footer .nav-links li a:hover,
+body.light-bg .nav-links li a:hover {
+    color:  #E49B42ff;
+}
+
+
+/* Logo & Brand */
+.logo {
+    display: flex;
+}
+
+.logo img {
+    max-width: 15%;
+    display: block;
+}
+
+.brand {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff381e;
+    font-family: 'MyFonth1', Nexa-Heavy;
+}
+
+/* Hero Section */
+.hero {
+    background: url("img/bg2.jpg") no-repeat center center/cover;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url("img/bg2.png");
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-logo {
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* Layout */
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'MyFont', Nexa-Light;
+}
+
+.sidebar {
+    width: 250px;
+    background:  #E49B42ff;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+.sidebar h2 {
+    margin-bottom: 40px;
+    font-size: 22px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 20px;
+}
+
+.sidebar li.active {
+    font-weight: bold;
+}
+
+.sidebar a {
+    color: white;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.container {
+    padding: 40px 40px 40px 40px;
+    margin: 5rem;
+    border-radius: 26px;
+    box-shadow: black;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    background:rgba(221, 230, 249, 0.72);
+}
+.container-index {
+    padding: 20px;
+
+}
+/* Header and Cards */
+header h1 {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-family: 'MyFonth1', Nexa-Heavy;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;         /* Allows wrapping on small screens */
+    gap: 20px;               /* Adds spacing between buttons */
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.cards button {
+    flex: 1 1 200px;         /* Allows growing, shrinking, and sets min width */
+    min-width: 180px;
+    background:  hsl(0, 0%, 100%);
+    color: #E49B42ff;
+    border: none;
+    padding: 20px;
+    border-radius: 16px;
+    font-size: small;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.cards button:hover {
+    background-color:  #E49B42ff;
+    color:hsl(0, 0%, 100%);
+}
+
+.cards h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.cards p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Remove link styling if using <a> inside */
+.cards a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Form */
+.form-section form {
+    background-color: rgb(255, 252, 246);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background: linear-gradient(-30deg, #E9D5FCff, #95A9E8ff, #CAD8FBff);
+    color:#f4f6f8;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: small;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #CAD8FBff;
+    color:  white;
+}
+
+.footer {
+    text-align: center;
+    padding: .5em 1em;
+    font-family: 'MyFont', Nexa-Light;
+    font-size: 10px;
+    background: linear-gradient(-30deg, #E9D5FCff, #95A9E8ff, #CAD8FBff);
+    color: #fff;
+  }
+  .form-queue-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ticket-form,
+.ticket-queue {
+    flex: 1;
+    min-width: 300px;
+}
+/* Ticket queue box styling */
+.ticket-queue {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.ticket-queue table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.ticket-queue th,
+.ticket-queue td {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.ticket-queue thead {
+    background-color:  #E49B42ff;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .form-queue-wrapper {
+        flex-direction: column;
+    }
+}
+.side-by-side-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap; /* allows stacking on small screens */
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.table-section {
+    flex: 3;
+    overflow-x: auto;
+    min-width: 300px;
+    font-size: small;
+}
+
+.form-section {
+    flex: 1;
+    min-width: 280px;
+    border-radius: 8px;
+    font-size: small;
+}
+.table-que-wraper{
+    background-color: rgb(255, 252, 246);
+    min-height: 30rem;
+}
+
+
